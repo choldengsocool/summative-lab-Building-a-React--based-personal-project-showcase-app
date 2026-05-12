@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import ProductContainer from './components/ProductContainer';
 import AddProductForm from './components/AddProductForm';
-import RemoveProductForm from './components/RemoveProductForm';
+import RemoveProductForm from './components/RemoveProductform';
 import './App.css';
 
 function App() {
