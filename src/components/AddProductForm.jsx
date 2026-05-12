@@ -77,4 +77,4 @@ function AddProductForm({ onAdd }) {
   );
 }
 
-export default AddForm;
+export default AddProductForm;

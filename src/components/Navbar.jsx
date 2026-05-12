@@ -15,18 +15,18 @@ function Navbar() {
 
   return (
     <nav style={{ borderBottom: "2px solid #ccc", paddingBottom: "10px", marginBottom: "20px" }}>
-      <a href="#" style={linkStyles}>
+      <NavLink to="/" style={linkStyles} end>
         Home
-      </a>
-      <a href="#" style={linkStyles}>
+      </NavLink>
+      <NavLink to="/admin" style={linkStyles}>
         Inventory
-      </a>
-      <a href="#" style={linkStyles}>
+      </NavLink>
+      <NavLink to="/add" style={linkStyles}>
         Admin
-      </a>
-      <a href="#" style={linkStyles}>
+      </NavLink>
+      <NavLink to="/remove" style={linkStyles}>
         Remove Product
-      </a>
+      </NavLink>
     </nav>
   );
 }
