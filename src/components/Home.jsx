@@ -34,6 +34,8 @@ function Home() {
       
       <h3>Quick Actions</h3>
       <p>Use the navigation above to <strong>Browse Inventory</strong> or <strong>List New Arrivals</strong>.</p>
+      <h3>Contact Support</h3>
+      <p>If you need assistance, please contact our support team at <a href="mailto:support@techpro.com">support@techpro.com</a>.</p>
     </div>
   );
 }
