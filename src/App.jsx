@@ -8,7 +8,31 @@ import RemoveProductForm from './components/RemoveProductForm';
 import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [products, setProducts] = useState([]);
+  const API_URL = "http://localhost:3000/products";
+
+  // GET Request: Fetching data from db.json
+  useEffect(() => {
+    fetch(API_URL)
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []);
+
+  // Handler for POST (Adding new product)
+  
+  const addProduct = (newProduct) => {
+    setProducts([...products, newProduct]);
+  };
+
+  const removeProduct = (removedId) => {
+    setProducts(products.filter((product) => product.id !== Number(removedId)));
+  };
+
+  // Handler for PATCH (Updating price)
+  const updateProduct = (updatedProd) => {
+    const updatedArray = products.map(p => p.id === updatedProd.id ? updatedProd : p);
+    setProducts(updatedArray);
+  };
 
   return (
     <Router>
