@@ -9,7 +9,7 @@ function Navbar() {
     background: "blue",
     textDecoration: "none",
     color: "white",
-    borderRadius: "8px",
+    borderRadius: "9px",
     textAlign: "center"
   };
 
