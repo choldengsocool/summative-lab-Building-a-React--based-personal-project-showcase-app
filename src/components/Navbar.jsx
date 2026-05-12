@@ -22,7 +22,10 @@ function Navbar() {
         Inventory
       </a>
       <a href="#" style={linkStyles}>
-        Add Product
+        Admin
+      </a>
+      <a href="#" style={linkStyles}>
+        Remove Product
       </a>
     </nav>
   );
