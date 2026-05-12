@@ -1,0 +1,85 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "MacBook Air M2",
+      "category": "Laptops",
+      "price": 1199,
+      "description": "Thin, light laptop with the powerful M2 chip.",
+      "image": "https://images.unsplash.com/photo-1611186871348-b1ec696e5237?w=500"
+    },
+    {
+      "id": "2",
+      "name": "iPhone 15 Pro",
+      "category": "Phones",
+      "price": 999,
+      "description": "Titanium design with advanced A17 Pro chip.",
+      "image": "https://images.unsplash.com/photo-1696446701796-da61225697cc?w=500"
+    },
+    {
+      "id": "3",
+      "name": "iPad Pro 12.9",
+      "category": "Tablets",
+      "price": 1099,
+      "description": "Liquid Retina XDR display with M2 chip.",
+      "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500"
+    },
+    {
+      "id": "4",
+      "name": "Dell XPS 13",
+      "category": "Laptops",
+      "price": 950,
+      "description": "Compact Windows laptop with InfinityEdge display.",
+      "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500"
+    },
+    {
+      "id": "5",
+      "name": "Samsung Galaxy S24 Ultra",
+      "category": "Phones",
+      "price": 1299,
+      "description": "Ultimate smartphone with AI-powered features.",
+      "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500"
+    },
+    {
+      "id": "6",
+      "name": "Mechanical Keyboard",
+      "category": "Accessories",
+      "price": 150,
+      "description": "RGB backlit keyboard with blue switches.",
+      "image": "https://images.unsplash.com/photo-1511467687858-23d96c32e4ae?w=500"
+    },
+    {
+      "id": "7",
+      "name": "Microsoft Surface Pro 9",
+      "category": "Tablets",
+      "price": 899,
+      "description": "The power of a laptop with the flexibility of a tablet.",
+      "image": "https://images.unsplash.com/photo-1585792180666-f73cdfe8d278?w=500"
+    },
+    {
+      "id": "8",
+      "name": "Noise Cancelling Headphones",
+      "category": "Accessories",
+      "price": 349,
+      "description": "Over-ear wireless headphones with premium sound.",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500"
+    },
+    {
+      "id": "9",
+      "name": "Google Pixel 8",
+      "category": "Phones",
+      "price": 699,
+      "description": "The helpful phone with a high-quality camera.",
+      "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500"
+    },
+    {
+      "id": "10",
+      "name": "USB-C Hub Multiport",
+      "category": "Accessories",
+      "price": 45,
+      "description": "6-in-1 adapter for laptops and tablets.",
+      "image": "https://images.unsplash.com/photo-1618410320928-25228d811631?w=500"
+    }
+    
+  ]
+}
