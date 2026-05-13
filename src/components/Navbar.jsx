@@ -14,7 +14,7 @@ function Navbar() {
   };
 
   return (
-    <nav style={{ borderBottom: "2px solid #ccc", paddingBottom: "10px", marginBottom: "20px" }}>
+    <nav style={{ display: "flex", justifyContent: "center", borderBottom: "2px solid #ccc", paddingBottom: "10px", marginBottom: "20px" }}>
       <NavLink to="/" style={linkStyles} end>
         Home
       </NavLink>
