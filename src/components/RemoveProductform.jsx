@@ -38,13 +38,13 @@ function RemoveProductform({ products, onRemove }) {
 
 return (
     <div style={{ marginTop: "520px", margin: "0 auto", padding: "24px", maxWidth: "400px", backgroundColor: "#f9f9f9", borderRadius: "8px", boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)" }}>
-    <h2>Remove product from Inventory</h2>
-    <p style={{ color: "#ddd", marginBottom: "20px" }}>
+    <h2 style={{color: "black"}}>Remove product from Inventory</h2>
+    <p style={{ color: "#000000", marginBottom: "20px" }}>
     Select a product below to remove it from the inventory:
     </p>
 
     <form onSubmit={handleSubmit} style={{display: "flex", flexDirection: "column", gap: "12px"}}>
-    <label style={{display: "flex", flexDirection: "column", color: "#fff" }}>
+    <label style={{display: "flex", flexDirection: "column", color: "#000000" }}>
         Choose Product:
         <select
         value={selectedId}
@@ -75,7 +75,7 @@ return (
     </form>
 
     {statusMessage && (
-        <p style={{ marginTop: "18px", color: "#fff" }}>{statusMessage}</p>
+        <p style={{ marginTop: "18px", color: "#000000" }}>{statusMessage}</p>
       )}
     </div>
 );

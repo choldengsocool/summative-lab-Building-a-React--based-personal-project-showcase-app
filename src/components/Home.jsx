@@ -4,7 +4,7 @@ function Home() {
   return (
     <div style={{ textAlign: "center", padding: "40px" }}>
       <h1>TechPro Admin Portal</h1>
-      <p style={{ fontSize: "1.2rem", color: "#555" }}>
+      <p style={{ fontSize: "2rem", color: "#555",  }}>
         Welcome to the central management system for your electronics empire.
         TechPro Admin Portal is a centralized electronics management system designed to simplify inventory control, product tracking, and administrative operations. 
         From phones and laptops to tablets and accessories, the platform helps businesses efficiently manage stock, organize products, monitor pricing, and streamline daily operations through a modern and user-friendly interface.
@@ -31,11 +31,17 @@ function Home() {
       </div>
 
       <hr style={{ margin: "40px 0" }} />
-      
+      <div style={{ marginBottom: "20px", backgroundColor: "#ededed", padding: "20px", borderRadius: "8px" }}>
       <h3>Quick Actions</h3>
       <p>Use the navigation above to <strong>Browse Inventory</strong> or <strong>List New Arrivals</strong>.</p>
+      </div>
+
+
+      <div style={{ marginBottom: "20px", backgroundColor: "#ededed", padding: "20px", borderRadius: "8px" }}>
       <h3>Contact Support</h3>
       <p>If you need assistance, please contact our support team at <a href="mailto:support@techpro.com">support@techpro.com</a>.</p>
+      </div>
+
     </div>
   );
 }
