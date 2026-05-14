@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
-function ProductCard({ product, onUpdate }) {
+function ProductCard({ product, onUpdate, onRemove }) {
   const [isEditing, setIsEditing] = useState(false);
   const [updatedPrice, setUpdatedPrice] = useState(product.price);
 
   // PATCH Request: Updates the simulated backend
   function handlePriceUpdate() {
-    fetch(`http://localhost:3001/products/${product.id}`, {
+    fetch(`http://localhost:3000/products/${product.id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ price: parseFloat(updatedPrice) }),
@@ -15,6 +15,23 @@ function ProductCard({ product, onUpdate }) {
       .then((data) => {
         onUpdate(data); // Syncs state in App.jsx
         setIsEditing(false);
+      });
+  }
+
+  // DELETE Request: Removes product from backend
+  function handleRemoveProduct() {
+    fetch(`http://localhost:3000/products/${product.id}`, {
+      method: "DELETE",
+    })
+      .then(response => {
+        if (response.ok) {
+          onRemove(product.id); // Syncs state in App.jsx
+        } else {
+          console.error("Failed to remove product.");
+        }
+      })
+      .catch(error => {
+        console.error("Error removing product:", error);
       });
   }
 
@@ -47,6 +64,9 @@ function ProductCard({ product, onUpdate }) {
           <div style={{ marginTop: "10px" }}>
             <p style={{ fontSize: "1.2rem" }}>Price: ${product.price}</p>
             <button onClick={() => setIsEditing(true)}>Edit Price</button>
+            <button onClick={handleRemoveProduct} style={{ marginLeft: "5px", backgroundColor: "#ff4444" }}>
+              Remove Product
+            </button>
           </div>
         )}
       </div>

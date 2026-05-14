@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ProductCard from './ProductCard';
 
-function ProductContainer({ products, onUpdate }) {
+function ProductContainer({ products, onUpdate, onRemove }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   // Filtering products dynamically by Name or Category
@@ -42,7 +42,8 @@ function ProductContainer({ products, onUpdate }) {
             <ProductCard 
               key={product.id} 
               product={product} 
-              onUpdate={onUpdate} 
+              onUpdate={onUpdate}
+              onRemove={onRemove}
             />
           ))
         ) : (

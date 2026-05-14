@@ -24,9 +24,7 @@ function Navbar() {
       <NavLink to="/add" style={linkStyles}>
         Admin
       </NavLink>
-      <NavLink to="/remove" style={linkStyles}>
-        Remove Product
-      </NavLink>
+      
     </nav>
   );
 }

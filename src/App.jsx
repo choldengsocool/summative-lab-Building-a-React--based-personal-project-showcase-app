@@ -4,7 +4,6 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import ProductContainer from './components/ProductContainer';
 import AddProductForm from './components/AddProductForm';
-import RemoveProductForm from './components/RemoveProductform';
 import './App.css';
 
 function App() {
@@ -25,7 +24,7 @@ function App() {
   };
 
   const removeProduct = (removedId) => {
-    setProducts(products.filter((product) => product.id !== Number(removedId)));
+    setProducts(products.filter((product) => String(product.id) !== String(removedId)));
   };
 
   // Handler for PATCH (Updating price)
@@ -43,11 +42,11 @@ function App() {
           <Route path="/admin" element={
             <ProductContainer 
               products={products} 
-              onUpdate={updateProduct} 
+              onUpdate={updateProduct}
+              onRemove={removeProduct}
             />
           } />
           <Route path="/add" element={<AddProductForm onAdd={addProduct} />} />
-          <Route path="/remove" element={<RemoveProductForm products={products} onRemove={removeProduct} />} />
         </Routes>
       </div>
     </Router>

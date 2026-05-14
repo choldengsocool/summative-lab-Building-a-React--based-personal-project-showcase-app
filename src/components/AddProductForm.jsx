@@ -29,11 +29,9 @@ function AddProductForm({ onAdd }) {
           image: "",
           description: ""
         });
-        alert(`${newProduct.name} added to inventory!`);
       })
       .catch((error) => {
         console.error("Failed to add product:", error);
-        alert("Unable to add product. Check the server and try again.");
       });
   }
 
