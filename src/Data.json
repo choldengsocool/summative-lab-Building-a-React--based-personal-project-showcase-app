@@ -10,7 +10,7 @@
     },
     {
       "id": "2",
-      "name": "iPhone 15 Pro",
+      "name": "iPhone 11 Pro",
       "category": "Phones",
       "price": 999,
       "description": "Pro-grade camera system with A17 Bionic chip.",
@@ -78,8 +78,7 @@
       "category": "Accessories",
       "price": 45,
       "description": "6-in-1 adapter for laptops and tablets.",
-      "image": "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=500"
+      "image": "https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/52/8608523/1.jpg?8295"
     }
-    
   ]
 }
