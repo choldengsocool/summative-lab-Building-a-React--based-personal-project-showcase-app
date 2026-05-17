@@ -1,47 +1,47 @@
-import React from 'react';
+ import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
-    <div style={{ textAlign: "center", padding: "40px" }}>
-      <h1>TechPro Admin Portal</h1>
-      <p style={{ fontSize: "1.4rem", color: "#555", textAlign:'center' }}>
-        Welcome to the central management system for your electronics empire.
-        TechPro Admin Portal is a centralized electronics management system designed to simplify inventory control, product tracking, and administrative operations. 
-        From phones and laptops to tablets and accessories, the platform helps businesses efficiently manage stock, organize products, monitor pricing, and streamline daily operations through a modern and user-friendly interface.
-        These are the services we provide to help you stay on top of your electronics inventory and operations:
+    <div className="hero">
+      <h1 className="hero-title">TechPro Admin Portal</h1>
+      <p className="hero-copy">
+        A polished electronics management console built for smart retailers and operations teams.
+        Track inventory, monitor product performance, and keep your catalog up to date across phones,
+        laptops, tablets, and accessories with a clear and modern admin workflow.
       </p>
-      
-      <div style={{ display: "flex", justifyContent: "space-around", marginTop: "40px", gap: "20px" }}>
-        <div className="category-box">
-          <h3>📱 Phones</h3>
-          <p>Manage the latest mobile devices.</p>
+
+      <div className="feature-grid">
+        <div className="category-box feature-phone">
+          <h3><span className="home-icon">📱</span>Phones</h3>
+          <p>Manage the latest mobile devices with streamlined inventory controls.</p>
         </div>
-        <div className="category-box">
-          <h3>💻 Laptops</h3>
-          <p>Inventory control for high-end workstations.</p>
+        <div className="category-box feature-laptop">
+          <h3><span className="home-icon">💻</span>Laptops</h3>
+          <p>Monitor performance and pricing for premium workstations.</p>
         </div>
-        <div className="category-box">
-          <h3>📟 Tablets</h3>
-          <p>Track tablet stock and pricing.</p>
+        <div className="category-box feature-tablet">
+          <h3><span className="home-icon">📟</span>Tablets</h3>
+          <p>Track tablet stock, categories, and pricing all from one dashboard.</p>
         </div>
-        <div className="category-box">
-          <h3>🎧 Accessories</h3>
-          <p>From chargers to premium audio gear.</p>
+        <div className="category-box feature-accessories">
+          <h3><span className="home-icon">🎧</span>Accessories</h3>
+          <p>Keep accessories organized and easy to categorize for fast restocking.</p>
         </div>
       </div>
 
-      <hr style={{ margin: "40px 0" }} />
-      <div style={{ marginBottom: "20px", backgroundColor: "#ededed", padding: "20px", borderRadius: "8px" }}>
-      <h3>Quick Actions</h3>
-      <p>Use the navigation above to <strong>Browse Inventory</strong> or <strong>List New Arrivals</strong>.</p>
+      <div className="section-card">
+        <h3>Quick Actions</h3>
+        <p>Use the navigation above to browse inventory, edit product details, or list new arrivals in minutes.</p>
+        <Link to="/shop" className="btn btn-primary" style={{ marginTop: '16px' }}>
+          Browse Products
+        </Link>
       </div>
 
-
-      <div style={{ marginBottom: "20px", backgroundColor: "#ededed", padding: "20px", borderRadius: "8px" }}>
-      <h3>Contact Support</h3>
-      <p>If you need assistance, please contact our support team at <a href="mailto:support@techpro.com">support@techpro.com</a>.</p>
+      <div className="section-card">
+        <h3>Contact Support</h3>
+        <p>If you need assistance, email <a href="mailto:support@techpro.com">support@techpro.com</a> for prompt help.</p>
       </div>
-
     </div>
   );
 }
