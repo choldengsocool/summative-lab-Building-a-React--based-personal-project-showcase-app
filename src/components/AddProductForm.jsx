@@ -36,40 +36,53 @@ function AddProductForm({ onAdd }) {
   }
 
   return (
-    <div style={{ maxWidth: "500px", margin: "0 auto", padding: "20px" }}>
+    <div className="form-card">
       <h2>List New Tech Product</h2>
-      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column" }}>
-        <input 
-          type="text" placeholder="Product Name" required 
+      <form onSubmit={handleSubmit}>
+        <input
+          className="form-control"
+          type="text"
+          placeholder="Product Name"
+          required
           value={formData.name}
-          onChange={(e) => setFormData({...formData, name: e.target.value})} 
+          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         />
         <select
+          className="form-control"
           value={formData.category}
-          onChange={(e) => setFormData({...formData, category: e.target.value})}
+          onChange={(e) => setFormData({ ...formData, category: e.target.value })}
         >
           <option value="Phones">Phones</option>
           <option value="Laptops">Laptops</option>
           <option value="Tablets">Tablets</option>
           <option value="Accessories">Accessories</option>
         </select>
-        <input 
-          type="number" placeholder="Price" required 
+        <input
+          className="form-control"
+          type="number"
+          placeholder="Price"
+          required
           value={formData.price}
-          onChange={(e) => setFormData({...formData, price: e.target.value})} 
-        />
-        <input 
-          type="text" placeholder="Image URL" required 
-          value={formData.image}
-          onChange={(e) => setFormData({...formData, image: e.target.value})} 
+          onChange={(e) => setFormData({ ...formData, price: e.target.value })}
         />
         <input
+          className="form-control"
+          type="text"
+          placeholder="Image URL"
+          required
+          value={formData.image}
+          onChange={(e) => setFormData({ ...formData, image: e.target.value })}
+        />
+        <input
+          className="form-control"
           type="text"
           placeholder="Description"
           value={formData.description}
-          onChange={(e) => setFormData({...formData, description: e.target.value})}
+          onChange={(e) => setFormData({ ...formData, description: e.target.value })}
         />
-        <button type="submit" style={{ marginTop: "10px" }}>Add Product</button>
+        <button type="submit" className="btn btn-primary primary-btn">
+          Add Product
+        </button>
       </form>
     </div>
   );

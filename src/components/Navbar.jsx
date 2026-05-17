@@ -1,30 +1,28 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-function Navbar() {
-  const linkStyles = {
-    display: "inline-block",
-    width: "120px",
-    padding: "12px",
-    margin: "0 6px 6px",
-    background: "blue",
-    textDecoration: "none",
-    color: "white",
-    borderRadius: "9px",
-    textAlign: "center"
-  };
-
+function Navbar({ currentUser, onLogout, cartCount }) {
   return (
-    <nav style={{ display: "flex", justifyContent: "center", borderBottom: "2px solid #ccc", paddingBottom: "10px", marginBottom: "20px" }}>
-      <NavLink to="/" style={linkStyles} end>
+    <nav className="navbar">
+      <NavLink to="/" end className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
         Home
       </NavLink>
-      <NavLink to="/admin" style={linkStyles}>
+      <NavLink to="/shop" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
+        Shop
+      </NavLink>
+      <NavLink to="/cart" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
+        Cart{cartCount ? ` (${cartCount})` : ''}
+      </NavLink>
+      <NavLink to="/admin" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
         Inventory
       </NavLink>
-      <NavLink to="/add" style={linkStyles}>
-        Admin
+      <NavLink to="/add" className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}>
+        Add Product
       </NavLink>
-      
+      {currentUser && (
+        <button type="button" className="btn btn-secondary logout-button" onClick={onLogout}>
+          Logout {currentUser.username}
+        </button>
+      )}
     </nav>
   );
 }
