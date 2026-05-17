@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ProductCard from './ProductCard';
 
-function ProductContainer({ products, onUpdate, onRemove }) {
+function ProductContainer({ products, onUpdate, onRemove, logs }) {
   const [searchTerm, setSearchTerm] = useState("");
 
   // Filtering products dynamically by Name or Category
@@ -25,13 +25,7 @@ function ProductContainer({ products, onUpdate, onRemove }) {
           placeholder="Search for phones, laptops, or tablets..." 
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          style={{
-            padding: "12px",
-            width: "60%",
-            borderRadius: "25px",
-            border: "1px solid #00d4ff",
-            outline: "none"
-          }}
+          className="search-input"
         />
       </div>
 
@@ -50,6 +44,24 @@ function ProductContainer({ products, onUpdate, onRemove }) {
           <p style={{ color: "white", textAlign: "center", width: "100%" }}>
             No products found matching your search.
           </p>
+        )}
+      </div>
+
+      <div className="audit-log">
+        <h2>Security Audit Log</h2>
+        {logs && logs.length > 0 ? (
+          <div className="audit-log-list">
+            {logs.map((entry) => (
+              <div key={entry.id} className="log-entry">
+                <p className="log-meta">
+                  <strong>{entry.action}</strong> &middot; {new Date(entry.timestamp).toLocaleString()}
+                </p>
+                <pre className="log-details">{JSON.stringify(entry.details, null, 2)}</pre>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p style={{ color: "#ddd" }}>No security events recorded yet.</p>
         )}
       </div>
     </div>
