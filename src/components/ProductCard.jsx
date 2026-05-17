@@ -37,35 +37,35 @@ function ProductCard({ product, onUpdate, onRemove }) {
 
   return (
     <div className="card">
-      <img 
-        src={product.image} 
-        alt={product.name} 
-        style={{ width: "100%", height: "200px", objectFit: "cover", borderRadius: "8px" }} 
-      />
-      <div style={{ padding: "15px" }}>
+      <img src={product.image} alt={product.name} className="product-image" />
+      <div className="card-body">
         <h3>{product.name}</h3>
-        <p style={{ color: "#00d4ff", fontWeight: "bold" }}>{product.category}</p>
-        <p style={{ fontSize: "0.9rem", color: "#ccc" }}>{product.description}</p>
-        
+        <p className="product-category">{product.category}</p>
+        <p>{product.description}</p>
+
         {isEditing ? (
-          <div style={{ marginTop: "10px" }}>
-            <input 
-              type="number" 
-              value={updatedPrice} 
+          <div className="card-actions">
+            <input
+              className="form-control"
+              type="number"
+              value={updatedPrice}
               onChange={(e) => setUpdatedPrice(e.target.value)}
-              style={{ width: "70px", padding: "5px", marginRight: "5px" }}
             />
-            <button onClick={handlePriceUpdate}>Save</button>
-            <button onClick={() => setIsEditing(false)} style={{ marginLeft: "5px", backgroundColor: "#666" }}>
+            <button type="button" className="btn btn-primary" onClick={handlePriceUpdate}>
+              Save
+            </button>
+            <button type="button" className="btn btn-secondary" onClick={() => setIsEditing(false)}>
               Cancel
             </button>
           </div>
         ) : (
-          <div style={{ marginTop: "10px" }}>
-            <p style={{ fontSize: "1.2rem" }}>Price: ${product.price}</p>
-            <button onClick={() => setIsEditing(true)}>Edit Price</button>
-            <button onClick={handleRemoveProduct} style={{ marginLeft: "5px", backgroundColor: "#ff4444" }}>
-              Remove Product
+          <div className="card-actions">
+            <p className="product-price">${product.price}</p>
+            <button type="button" className="btn btn-primary" onClick={() => setIsEditing(true)}>
+              Edit Price
+            </button>
+            <button type="button" className="btn btn-danger" onClick={handleRemoveProduct}>
+              Remove
             </button>
           </div>
         )}
